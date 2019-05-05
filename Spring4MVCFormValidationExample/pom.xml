@@ -4,12 +4,61 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>SpringExamples</artifactId>
-        <groupId>com.mkyong.common</groupId>
+        <groupId>springtutorials</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <packaging>war</packaging>
     <artifactId>Spring4MVCFormValidationExample</artifactId>
 
+
+    <properties>
+        <hibernate.validator.version>5.1.2.Final</hibernate.validator.version>
+        <javax.validation.version>1.1.0.Final</javax.validation.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- jsr303 validation dependencies-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate.validator.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <warName>Spring4MVCFormValidationExample</warName>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.2</version>
+                    <configuration>
+                        <url>http://localhost:8080/manager/text</url>
+                        <server>TomcatServer</server>
+                        <path>/Spring4MVCHelloWorldNoXMLDemo</path>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <finalName>Spring4MVCFormValidationExample</finalName>
+    </build>
 
 </project>
