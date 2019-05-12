@@ -12,6 +12,9 @@ http://maven.apache.org/maven-v4_0_0.xsd">
     <module>Spring4MVCHelloWorldNoXMLDemo</module>
     <module>Spring4HelloWorldBeanApp</module>
     <module>SpringDIWithXMLExample</module>
+      <module>SpringAutowiringXML</module>
+      <module>SpringDIAutowired</module>
+    <module>Application</module>
   </modules>
   <name>SpringExamples</name>
   <url>http://maven.apache.org</url>

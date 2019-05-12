@@ -113,4 +113,7 @@ w plikach pom.xml modułów:
 ```
 
 # spring
+Application - 
 Spring4HelloWorldBeanApp - http://websystique.com/spring/spring-4-hello-world-example-annotation-tutorial-full-example/
+SpringAutowiringXML - http://websystique.com/spring/spring-beans-auto-wiring-example-using-xml-configuration/
+SpringDIAutowired - http://websystique.com/spring/spring-dependency-injection-annotation-beans-auto-wiring-using-autowired-qualifier-resource-annotations-configuration/
