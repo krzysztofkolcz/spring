@@ -15,6 +15,8 @@ http://maven.apache.org/maven-v4_0_0.xsd">
       <module>SpringAutowiringXML</module>
       <module>SpringDIAutowired</module>
     <module>Application</module>
+    <module>WSq004Spring4ComponentScanning</module>
+    <module>WSq005Spring4PropertySource</module>
   </modules>
   <name>SpringExamples</name>
   <url>http://maven.apache.org</url>
@@ -23,15 +25,31 @@ http://maven.apache.org/maven-v4_0_0.xsd">
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <springframework.version>4.0.6.RELEASE</springframework.version>
+    <!--<springframework.version>5.1.7.RELEASE</springframework.version>-->
+    <joda-time.version>2.3</joda-time.version>
   </properties>
 
   <dependencies>
 
+    <!--
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring</artifactId>
       <version>2.5.6</version>
     </dependency>
+    -->
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${springframework.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${springframework.version}</version>
+    </dependency>
+
 
     <dependency>
       <groupId>org.springframework</groupId>
@@ -56,6 +74,23 @@ http://maven.apache.org/maven-v4_0_0.xsd">
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+    <!-- @Resource(name="applicationUser") -->
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <!-- Joda-Time -->
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>${joda-time.version}</version>
+    </dependency>
+
+
 
   </dependencies>
 
